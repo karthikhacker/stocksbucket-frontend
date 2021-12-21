@@ -33,7 +33,7 @@ const CreateAccount = () => {
     const [country_of_birth, setCountryOfBirth] = useState(null);
     const [country_of_tax_residence, setCountryOfTaxResidence] = useState(null);
     const [visa_type, setVisaType] = useState(null);
-    const [visa_expiration_date, setVisaExpirationDate] = useState(Date);
+    const [visa_expiration_date, setVisaExpirationDate] = useState(null);
     const [date_of_departure_from_usa, setDateOfDepartureFromUsa] = useState(null);
     const [permanent_resident, setPermanentResident] = useState(Boolean);
     const [funding_source, setFundingSource] = useState([]);

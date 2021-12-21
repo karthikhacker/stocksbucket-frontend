@@ -1,0 +1,4666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://alpaca.markets/docs/broker/api-references/accounts/accounts/#agreements -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Account _ Alpaca Broker API_files/livereload.js" data-no-instant="" defer=""></script>
+  <meta name="generator" content="Hugo 0.82.0">
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Open brokerage accounts, enable commission-free trading, and manage the ongoing user experience with Alpaca Broker API">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Account">
+<meta property="og:description" content="Open brokerage accounts, enable commission-free trading, and manage the ongoing user experience with Alpaca Broker API">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://alpaca.markets/docs/broker/api-references/accounts/accounts/"><meta property="article:section" content="api-references">
+
+
+
+<title>Account | Alpaca Broker API</title>
+<link rel="manifest" href="https://alpaca.markets/docs/broker/manifest.json">
+<link rel="icon" href="https://alpaca.markets/docs/broker/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="./Account _ Alpaca Broker API_files/book.min.6f61273d40ed4b7b50ac3cea7b534e4e06b018e150e200c85ee0eb7157b43cec.css" integrity="sha256-b2EnPUDtS3tQrDzqe1NOTgawGOFQ4gDIXuDrcVe0POw=">
+<script defer="" src="./Account _ Alpaca Broker API_files/en.search.min.68a3057b539a3f2155ff37244eaf10f4c39c28add6ac568aa904a89cfa1a5729.js" integrity="sha256-aKMFe1OaPyFV/zckTq8Q9MOcKK3WrFaKqQSonPoaVyk="></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-113069056-7', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async="" src="./Account _ Alpaca Broker API_files/analytics.js"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control">
+  <input type="checkbox" class="hidden toggle" id="toc-control">
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="https://alpaca.markets/docs/broker"><img src="./Account _ Alpaca Broker API_files/alpaca_icon@1x.png" alt="Logo"><span>Alpaca Broker API</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/">
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/introduction/" class="">Introduction</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/platform/" class="">Alpaca API Platform</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/use-cases/" class="">Use Cases</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-overview/" class="">API Overview</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/integration/" class="">Integration</a>
+    
+  
+
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/integration/account-opening/_index.md/" class="">Account Opening</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/integration/funding/" class="">Funding</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/integration/trading/" class="">Trading</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/integration/daily-processes/" class="">Daily Processes and Reconciliations</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/integration/state-confirms/" class="">Statements and Confirms</a>
+    
+  
+
+
+        </li>
+      
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/ribbit/" class="">Example Mobile App</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/get-started/" class="">Get Started!</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/market-data/" class="">Market Data</a>
+    
+  
+
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/market-data/historical/" class="">Historical Data</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/market-data/realtime/" class="">Real-time Data</a>
+    
+  
+
+
+        </li>
+      
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <span>API References</span>
+  
+
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0832f0c9fc0c0ff890e6df17a3cf7e1c" class="toggle" checked="">
+    <label for="section-0832f0c9fc0c0ff890e6df17a3cf7e1c" class="flex justify-between">
+      <a class="">Accounts</a>
+      <span>▾</span>
+    </label>
+  
+
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/accounts/accounts/" class="  perma-active">Account</a>
+    <ul id="scrollspy" class="scrollspy"><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#allowed-setups" title="Allowed Setups " class="null                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ">Allowed Setups </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#the-account-model" title="The Account Model " class="null                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               active">The Account Model </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#fixtures" title="Fixtures " class="null                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ">Fixtures </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#creating-an-account" title="Creating an Account " class="null                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ">Creating an Account </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#uploading-cip-information" title="Uploading CIP information ">Uploading CIP information </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-cip-information" title="Retrieving CIP information ">Retrieving CIP information </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#international-accounts" title="International Accounts ">International Accounts </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#listing-all-accounts" title="Listing All Accounts ">Listing All Accounts </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-brokerage" title="Retrieving an Account (Brokerage) ">Retrieving an Account (Brokerage) </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-trading" title="Retrieving an Account (Trading) ">Retrieving an Account (Trading) </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#updating-an-account" title="Updating an Account ">Updating an Account </a></li><li class="anchor"><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#deleting-an-account" title="Deleting an Account ">Deleting an Account </a></li></ul>
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/accounts/account-activities/" class="">Account Activities</a>
+    
+  
+
+
+        </li>
+      
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/assets/" class="">Assets</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/calendar/" class="">Calendar</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/clock/" class="">Clock</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/documents/" class="">Documents</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/events/" class="">Events</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ef85bb470a1a1180c4910164b5a2a92d" class="toggle">
+    <label for="section-ef85bb470a1a1180c4910164b5a2a92d" class="flex justify-between">
+      <a class="">Funding</a>
+      <span>▾</span>
+    </label>
+  
+
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/funding/ach/" class="">ACH Relationships</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/funding/bank/" class="">Bank</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/funding/transfers/" class="">Transfers</a>
+    
+  
+
+
+        </li>
+      
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/journals/" class="">Journals</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/oauth/" class="">OAuth</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-14c94cd9cbabd41e1f16c827f78483c6" class="toggle">
+    <label for="section-14c94cd9cbabd41e1f16c827f78483c6" class="flex justify-between">
+      <a class="">Trading</a>
+      <span>▾</span>
+    </label>
+  
+
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/trading/orders/" class="">Orders</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/trading/positions/" class="">Positions</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/trading/portfolio-history/" class="">Portfolio History</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/trading/watchlists/" class="">Watchlists</a>
+    
+  
+
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/api-references/trading/trading-configurations/" class="">Trading Configurations</a>
+    
+  
+
+
+        </li>
+      
+    
+    
+  </ul>
+
+        </li>
+      
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/community/" class="">Community and Other Useful Resources</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat">
+          
+  
+  
+
+  
+    <a href="http://alpaca.markets/docs/broker/changelog/" class="">Changelog</a>
+    
+  
+
+
+          
+  <ul>
+    
+    
+  </ul>
+
+        </li>
+      
+    
+    
+    
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<style>
+ 
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+ 
+.fa:hover {
+  opacity: 0.7;
+}
+
+</style>
+
+<link rel="stylesheet" href="./Account _ Alpaca Broker API_files/font-awesome.min.css">
+
+<a href="https://twitter.com/alpacahq" class="fa fa-twitter"></a>
+<a href="https://www.linkedin.com/company/alpacadb-inc-" class="fa fa-linkedin"></a>
+<a href="https://github.com/alpacahq" class="fa fa-github"></a>
+<a href="https://alpaca.markets/slack" class="fa fa-slack"></a>
+
+<br>
+<p>2021 Released under the MIT license</p>
+<p>Documentation built with Hugo using the Book theme.</p>
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="./Account _ Alpaca Broker API_files/menu.svg" class="book-icon" alt="Menu">
+  </label>
+
+  <strong>Account</strong>
+
+  <label for="toc-control">
+    
+    <img src="./Account _ Alpaca Broker API_files/toc.svg" class="book-icon" alt="Table of Contents">
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <style>
+    .button {
+      background-color: #FFD700;
+      border: none;
+      color:#030303;
+      padding: 10px 35px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      font-weight: 500;
+      border-radius: 4px;
+      font-family: 'carnasbold';
+      min-width: 181px;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+      letter-spacing: 0.025em;
+    }
+
+    .button:hover {
+      background: #ffdf33;
+      font-weight: 500
+    }
+
+    
+</style>
+<br>
+<a href="https://broker-app.alpaca.markets/sign-up" class="button">Get API keys</a>
+<br>
+<br>
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#allowed-setups"><strong>Allowed Setups</strong></a></li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#the-account-model"><strong>The Account Model</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-account-object">Sample Account Object</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#attributes">Attributes</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#enums">Enums</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#fixtures">Fixtures</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#creating-an-account"><strong>Creating an Account</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#uploading-cip-information"><strong>Uploading CIP information</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-1">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#enums-1">Enums</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-cip-information"><strong>Retrieving CIP information</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-2">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-1">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#international-accounts"><strong>International Accounts</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#w-8-ben">W-8 BEN</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#listing-all-accounts"><strong>Listing All Accounts</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-3">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-2">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-brokerage"><strong>Retrieving an Account (Brokerage)</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-4">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-3">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-trading"><strong>Retrieving an Account (Trading)</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-5">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-4">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#updating-an-account"><strong>Updating an Account</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-6">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-5">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#deleting-an-account"><strong>Deleting an Account</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-7">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-6">Response</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="accounts">
+  Accounts
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#accounts">#</a>
+</h1>
+<p>The Accounts API allows you to create and manage the accounts under your brokerage account.</p>
+<h2 id="allowed-setups">
+  <strong>Allowed Setups</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#allowed-setups">#</a>
+</h2>
+<blockquote class="book-hint good">
+  <strong>Fully-Disclosed:</strong> Brokers with an FD setup can access the Accounts API
+</blockquote>
+
+<blockquote class="book-hint danger">
+  <strong>Omnibus:</strong> Brokers with an Omnibus setup cannot access the Accounts API
+</blockquote>
+
+<hr>
+<h2 id="the-account-model">
+  <strong>The Account Model</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#the-account-model">#</a>
+</h2>
+<h3 id="sample-account-object">
+  Sample Account Object
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-account-object">#</a>
+</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"contact"</span>: {
+    <span style="color:#f92672">"email_address"</span>: <span style="color:#e6db74">"cool_alpaca@example.com"</span>,
+    <span style="color:#f92672">"phone_number"</span>: <span style="color:#e6db74">"555-666-7788"</span>,
+    <span style="color:#f92672">"street_address"</span>: [<span style="color:#e6db74">"20 N San Mateo Dr"</span>],
+    <span style="color:#f92672">"city"</span>: <span style="color:#e6db74">"San Mateo"</span>,
+    <span style="color:#f92672">"state"</span>: <span style="color:#e6db74">"CA"</span>,
+    <span style="color:#f92672">"postal_code"</span>: <span style="color:#e6db74">"94401"</span>,
+    <span style="color:#f92672">"country"</span>: <span style="color:#e6db74">"USA"</span>
+  },
+  <span style="color:#f92672">"identity"</span>: {
+    <span style="color:#f92672">"given_name"</span>: <span style="color:#e6db74">"John"</span>,
+    <span style="color:#f92672">"family_name"</span>: <span style="color:#e6db74">"Doe"</span>,
+    <span style="color:#f92672">"date_of_birth"</span>: <span style="color:#e6db74">"1990-01-01"</span>,
+    <span style="color:#f92672">"tax_id"</span>: <span style="color:#e6db74">"666-55-4321"</span>,
+    <span style="color:#f92672">"tax_id_type"</span>: <span style="color:#e6db74">"USA_SSN"</span>,
+    <span style="color:#f92672">"country_of_citizenship"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"country_of_birth"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"country_of_tax_residence"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"funding_source"</span>: [<span style="color:#e6db74">"employment_income"</span>]
+  },
+  <span style="color:#f92672">"disclosures"</span>: {
+    <span style="color:#f92672">"is_control_person"</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">"is_affiliated_exchange_or_finra"</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">"is_politically_exposed"</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">"immediate_family_exposed"</span>: <span style="color:#66d9ef">false</span>
+  },
+  <span style="color:#f92672">"agreements"</span>: [
+    {
+      <span style="color:#f92672">"agreement"</span>: <span style="color:#e6db74">"margin_agreement"</span>,
+      <span style="color:#f92672">"signed_at"</span>: <span style="color:#e6db74">"2020-09-11T18:09:33Z"</span>,
+      <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"185.13.21.99"</span>,
+      <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"16.2021.05"</span>
+    },
+    {
+      <span style="color:#f92672">"agreement"</span>: <span style="color:#e6db74">"account_agreement"</span>,
+      <span style="color:#f92672">"signed_at"</span>: <span style="color:#e6db74">"2020-09-11T18:13:44Z"</span>,
+      <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"185.13.21.99"</span>,
+      <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"16.2021.05"</span>
+    },
+    {
+      <span style="color:#f92672">"agreement"</span>: <span style="color:#e6db74">"customer_agreement"</span>,
+      <span style="color:#f92672">"signed_at"</span>: <span style="color:#e6db74">"2020-09-11T18:13:44Z"</span>,
+      <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"185.13.21.99"</span>,
+      <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"16.2021.05"</span>
+    }
+  ],
+  <span style="color:#f92672">"documents"</span>: [
+    {
+      <span style="color:#f92672">"document_type"</span>: <span style="color:#e6db74">"identity_verification"</span>,
+      <span style="color:#f92672">"document_sub_type"</span>: <span style="color:#e6db74">"passport"</span>,
+      <span style="color:#f92672">"content"</span>: <span style="color:#e6db74">"/9j/Cg=="</span>,
+      <span style="color:#f92672">"mime_type"</span>: <span style="color:#e6db74">"image/jpeg"</span>
+    },
+    {
+      <span style="color:#f92672">"document_type"</span>: <span style="color:#e6db74">"w8ben"</span>,
+      <span style="color:#f92672">"content"</span>: <span style="color:#e6db74">"JVBERi0K"</span>,
+      <span style="color:#f92672">"mime_type"</span>: <span style="color:#e6db74">"application/pdf"</span>
+    }
+  ],
+  <span style="color:#f92672">"trusted_contact"</span>: {
+    <span style="color:#f92672">"given_name"</span>: <span style="color:#e6db74">"Jane"</span>,
+    <span style="color:#f92672">"family_name"</span>: <span style="color:#e6db74">"Doe"</span>,
+    <span style="color:#f92672">"email_address"</span>: <span style="color:#e6db74">"jane.doe@example.com"</span>
+  }
+}
+</code></pre></div><h3 id="attributes">
+  Attributes
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#attributes">#</a>
+</h3>
+<h4 id="parameters">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contact</code></td>
+<td>Contact information about the user</td>
+</tr>
+<tr>
+<td><code>identity</code></td>
+<td>KYC information about the user</td>
+</tr>
+<tr>
+<td><code>disclosures</code></td>
+<td>Required disclosures about the user</td>
+</tr>
+<tr>
+<td><code>documents</code></td>
+<td>Any documents that need to be uploaded (eg. passport, visa, …)</td>
+</tr>
+<tr>
+<td><code>trusted_contact</code></td>
+<td>The contact information of a trusted contact to the user in case account recovery is needed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contact</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email_address</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>street_address</code></td>
+<td>array</td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Identity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>given_name</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>date</td>
+</tr>
+<tr>
+<td><code>tax_id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>tax_id_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#tax-id-type">ENUM.TaxIdType</a></td>
+</tr>
+<tr>
+<td><code>country_of_citizenship</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>country_of_birth</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>country_of_tax_residence</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>visa_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#visa-type">ENUM.VisaType</a></td>
+</tr>
+<tr>
+<td><code>visa_expiration_date</code></td>
+<td>date</td>
+</tr>
+<tr>
+<td><code>date_of_departure_from_usa</code></td>
+<td>date</td>
+</tr>
+<tr>
+<td><code>permanent_resident</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>funding_source</code></td>
+<td>array of <a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#funding-source">ENUM.FundingSource</a></td>
+</tr>
+<tr>
+<td><code>annual_income_min</code></td>
+<td>string/number</td>
+</tr>
+<tr>
+<td><code>annual_income_max</code></td>
+<td>string/number</td>
+</tr>
+<tr>
+<td><code>liquid_net_worth_min</code></td>
+<td>string/number</td>
+</tr>
+<tr>
+<td><code>liquid_net_worth_max</code></td>
+<td>string/number</td>
+</tr>
+<tr>
+<td><code>total_net_worth_min</code></td>
+<td>string/number</td>
+</tr>
+<tr>
+<td><code>total_net_worth_max</code></td>
+<td>string/number</td>
+</tr>
+<tr>
+<td><code>extra</code></td>
+<td>object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disclosures</strong></p>
+<p>It is your responsibility as the service provider to denote if the account owner falls under each category defined by FINRA rules. We recommend asking these questions at any point of the onboarding process of each account owner in the form of Y/N and Radio Buttons.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is_control_person</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>is_affiliated_exchange_or_finra</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>is_politically_exposed</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>immediate_family_exposed</code></td>
+<td>boolean</td>
+</tr>
+<tr>
+<td><code>employment_status</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#employment-status">ENUM.EmploymentStatus</a></td>
+</tr>
+<tr>
+<td><code>employer_name</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>employer_address</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>employment_position</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Agreements</strong></p>
+<p>In order to comply with Alpaca’s terms of service, each account owner must be presented the following agreements.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[].agreement</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#agreements">ENUM.DocumentType</a></td>
+</tr>
+<tr>
+<td><code>[].signed_at</code></td>
+<td>string (timestamp)</td>
+</tr>
+<tr>
+<td><code>[].ip_address</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>[].revision</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Documents</strong></p>
+<ol>
+<li>
+<p><strong>​<code>DocumentUpload</code></strong></p>
+<p>This model consists of a series of documents based on the KYC and international taxation requirements. Documents are binary objects whose contents are encoded in base64. Each encoded content size is limited to 10MB. The only exception is the W-8BEN form which we accept in multiple formats.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>document_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#document-type">ENUM.DocumentType</a></td>
+</tr>
+<tr>
+<td><code>document_sub_type</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>base64 string</td>
+</tr>
+<tr>
+<td><code>mime_type</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong><code>Document</code></strong></p>
+<p>To add an additional document after submission, please use the <code>Document</code> model below to replace any <code>DocumentUpload</code></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>document_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#document-type">ENUM.DocumentType</a></td>
+</tr>
+<tr>
+<td><code>document_sub_type</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>UUID</td>
+</tr>
+<tr>
+<td><code>mime_type</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>timestamp string</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><strong>Trusted Contact</strong></p>
+<p>This model input is optional. However, the client should make reasonable effort to obtain the trusted contact information. See more details in <a href="https://www.finra.org/sites/default/files/Regulatory-Notice-17-11.pdf">FINRA Notice 17-11</a></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>given_name</code></td>
+<td>string</td>
+<td>First name</td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>string</td>
+<td>Last name</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, only one of the following is <strong>required</strong>,</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email_address</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>street_address</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="enums">
+  Enums
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#enums">#</a>
+</h3>
+<h4 id="tax-id-type">
+  Tax ID Type
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#tax-id-type">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>USA_SSN</code></td>
+<td>USA Social Security Number</td>
+</tr>
+<tr>
+<td><code>ARG_AR_CUIT</code></td>
+<td>Argentina CUIT</td>
+</tr>
+<tr>
+<td><code>AUS_TFN</code></td>
+<td>Australian Tax File Number</td>
+</tr>
+<tr>
+<td><code>AUS_ABN</code></td>
+<td>Australian Business Number</td>
+</tr>
+<tr>
+<td><code>BOL_NIT</code></td>
+<td>Bolivia NIT</td>
+</tr>
+<tr>
+<td><code>BRA_CPF</code></td>
+<td>Brazil CPF</td>
+</tr>
+<tr>
+<td><code>CHL_RUT</code></td>
+<td>Chile RUT</td>
+</tr>
+<tr>
+<td><code>COL_NIT</code></td>
+<td>Colombia NIT</td>
+</tr>
+<tr>
+<td><code>CRI_NITE</code></td>
+<td>Costa Rica NITE</td>
+</tr>
+<tr>
+<td><code>DEU_TAX_ID</code></td>
+<td>Germany Tax ID (Identifikationsnummer)</td>
+</tr>
+<tr>
+<td><code>DOM_RNC</code></td>
+<td>Dominican Republic RNC</td>
+</tr>
+<tr>
+<td><code>ECU_RUC</code></td>
+<td>Ecuador RUC</td>
+</tr>
+<tr>
+<td><code>FRA_SPI</code></td>
+<td>France SPI (Reference Tax Number)</td>
+</tr>
+<tr>
+<td><code>GBR_UTR</code></td>
+<td>UK UTR (Unique Taxpayer Reference)</td>
+</tr>
+<tr>
+<td><code>GBR_NINO</code></td>
+<td>UK NINO (National Insurance Number)</td>
+</tr>
+<tr>
+<td><code>GTM_NIT</code></td>
+<td>Guatemala NIT</td>
+</tr>
+<tr>
+<td><code>HND_RTN</code></td>
+<td>Honduras RTN</td>
+</tr>
+<tr>
+<td><code>HUN_TIN</code></td>
+<td>Hungary TIN Number</td>
+</tr>
+<tr>
+<td><code>IDN_KTP</code></td>
+<td>Indonesia KTP</td>
+</tr>
+<tr>
+<td><code>IND_PAN</code></td>
+<td>India PAN Number</td>
+</tr>
+<tr>
+<td><code>ISR_TAX_ID</code></td>
+<td>Israel Tax ID (Teudat Zehut)</td>
+</tr>
+<tr>
+<td><code>ITA_TAX_ID</code></td>
+<td>Italy Tax ID (Codice Fiscale)</td>
+</tr>
+<tr>
+<td><code>JPN_TAX_ID</code></td>
+<td>Japan Tax ID (Koijin Bango)</td>
+</tr>
+<tr>
+<td><code>MEX_RFC</code></td>
+<td>Mexico RFC</td>
+</tr>
+<tr>
+<td><code>NIC_RUC</code></td>
+<td>Nicaragua RUC</td>
+</tr>
+<tr>
+<td><code>NLD_TIN</code></td>
+<td>Netherlands TIN Number</td>
+</tr>
+<tr>
+<td><code>PAN_RUC</code></td>
+<td>Panama RUC</td>
+</tr>
+<tr>
+<td><code>PER_RUC</code></td>
+<td>Peru RUC</td>
+</tr>
+<tr>
+<td><code>PRY_RUC</code></td>
+<td>Paraguay RUC</td>
+</tr>
+<tr>
+<td><code>SGP_NRIC</code></td>
+<td>Singapore NRIC</td>
+</tr>
+<tr>
+<td><code>SGP_FIN</code></td>
+<td>Singapore FIN</td>
+</tr>
+<tr>
+<td><code>SGP_ASGD</code></td>
+<td>Singapore ASGD</td>
+</tr>
+<tr>
+<td><code>SGP_ITR</code></td>
+<td>Singapore ITR</td>
+</tr>
+<tr>
+<td><code>SLV_NIT</code></td>
+<td>El Salvador NIT</td>
+</tr>
+<tr>
+<td><code>SWE_TAX_ID</code></td>
+<td>Sweden Tax ID (Personnummer)</td>
+</tr>
+<tr>
+<td><code>URY_RUT</code></td>
+<td>Uruguay RUT</td>
+</tr>
+<tr>
+<td><code>VEN_RIF</code></td>
+<td>Venezuela RIF</td>
+</tr>
+<tr>
+<td><code>NOT_SPECIFIED</code></td>
+<td>Other Tax IDs</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Please feel free to reach out to Alpaca if you need other tax ID types.</li>
+</ul>
+<h4 id="funding-source">
+  Funding Source
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#funding-source">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>employment_income</code></td>
+<td>Employment income</td>
+</tr>
+<tr>
+<td><code>investments</code></td>
+<td>Investments</td>
+</tr>
+<tr>
+<td><code>inheritance</code></td>
+<td>Inheritance</td>
+</tr>
+<tr>
+<td><code>business_income</code></td>
+<td>Business income</td>
+</tr>
+<tr>
+<td><code>savings</code></td>
+<td>Savings</td>
+</tr>
+<tr>
+<td><code>family</code></td>
+<td>Family</td>
+</tr>
+</tbody>
+</table>
+<h4 id="visa-type">
+  Visa Type
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#visa-type">#</a>
+</h4>
+<p>In addition to the following USA visa categories, we accept any sub visas of the list below. Sub visas must be passed in according to their parent category. Note that United States green card holders are considered permanent residents and should not pass in a visa type.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1</code></td>
+<td>USA Visa Category B-1</td>
+</tr>
+<tr>
+<td><code>B2</code></td>
+<td>USA Visa Category B-2</td>
+</tr>
+<tr>
+<td><code>DACA</code></td>
+<td>USA Visa Category DACA</td>
+</tr>
+<tr>
+<td><code>E1</code></td>
+<td>USA Visa Category E-1</td>
+</tr>
+<tr>
+<td><code>E2</code></td>
+<td>USA Visa Category E-2</td>
+</tr>
+<tr>
+<td><code>E3</code></td>
+<td>USA Visa Category E-3</td>
+</tr>
+<tr>
+<td><code>F1</code></td>
+<td>USA Visa Category F-1</td>
+</tr>
+<tr>
+<td><code>G4</code></td>
+<td>USA Visa Category G-4</td>
+</tr>
+<tr>
+<td><code>H1B</code></td>
+<td>USA Visa Category H-1B</td>
+</tr>
+<tr>
+<td><code>J1</code></td>
+<td>USA Visa Category J-1</td>
+</tr>
+<tr>
+<td><code>L1</code></td>
+<td>USA Visa Category L-1</td>
+</tr>
+<tr>
+<td><code>Other</code></td>
+<td>Any other USA Visa Category</td>
+</tr>
+<tr>
+<td><code>O1</code></td>
+<td>USA Visa Category O-1</td>
+</tr>
+<tr>
+<td><code>TN1</code></td>
+<td>USA Visa Category TN-1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="employment-status">
+  Employment Status
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#employment-status">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unemployed</code></td>
+<td>Unemployed</td>
+</tr>
+<tr>
+<td><code>employed</code></td>
+<td>Employed</td>
+</tr>
+<tr>
+<td><code>student</code></td>
+<td>Student</td>
+</tr>
+<tr>
+<td><code>retired</code></td>
+<td>Retired</td>
+</tr>
+</tbody>
+</table>
+<h4 id="agreements">
+  Agreements
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#agreements">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>margin_agreement</code></td>
+<td>Margin agreement</td>
+</tr>
+<tr>
+<td><code>account_agreement</code></td>
+<td>Account agreement</td>
+</tr>
+<tr>
+<td><code>customer_agreement</code></td>
+<td>Customer agreement</td>
+</tr>
+</tbody>
+</table>
+<h4 id="document-type">
+  Document Type
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#document-type">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>identity_verification</code></td>
+<td>Identity verification</td>
+</tr>
+<tr>
+<td><code>address_verification</code></td>
+<td>Address verification</td>
+</tr>
+<tr>
+<td><code>date_of_birth_verification</code></td>
+<td>Date of birth verification</td>
+</tr>
+<tr>
+<td><code>tax_id_verification</code></td>
+<td>Tax ID verification</td>
+</tr>
+<tr>
+<td><code>account_approval_letter</code></td>
+<td>407 approval letter</td>
+</tr>
+<tr>
+<td><code>w8ben</code></td>
+<td>W-8 BEN tax form</td>
+</tr>
+</tbody>
+</table>
+<h4 id="account-status">
+  Account Status
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#account-status">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SUBMITTED</code></td>
+<td>Application has been submitted and in process of review</td>
+</tr>
+<tr>
+<td><code>ACTION_REQUIRED</code></td>
+<td>Application requires manual action</td>
+</tr>
+<tr>
+<td><code>EDITED</code></td>
+<td>Application was edited (e.g. to match info from uploaded docs). This is a transient status.</td>
+</tr>
+<tr>
+<td><code>APPROVAL_PENDING</code></td>
+<td>Initial value. Application approval process is in process</td>
+</tr>
+<tr>
+<td><code>APPROVED</code></td>
+<td>Account application has been approved, waiting to be <code>ACTIVE</code></td>
+</tr>
+<tr>
+<td><code>REJECTED</code></td>
+<td>Account application is rejected</td>
+</tr>
+<tr>
+<td><code>ACTIVE</code></td>
+<td>Account is fully active. Trading and funding can only be processed if an account is <code>ACTIVE</code>.</td>
+</tr>
+<tr>
+<td><code>DISABLED</code></td>
+<td>Account is disabled, comes after <code>ACTIVE</code></td>
+</tr>
+<tr>
+<td><code>ACCOUNT_CLOSED</code></td>
+<td>Account is closed</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="fixtures">
+  Fixtures
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#fixtures">#</a>
+</h2>
+<p>Accounts API supports fixtures in Sandbox Environment. You can pass the desired account status in the optional parameter <code>additional_information</code> when creating an account. Note that this parameter is not listed above in the account model as it is only to be used in the Sandbox Environment for testing purposes.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SUBMITTED</code></td>
+<td><code>/fixtures/status=SUBMITTED/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>ACTION_REQUIRED</code></td>
+<td><code>/fixtures/status=ACTION_REQUIRED/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>APPROVAL_PENDING</code></td>
+<td><code>/fixtures/status=APPROVAL_PENDING/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>APPROVED</code></td>
+<td><code>/fixtures/status=APPROVED/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>REJECTED</code></td>
+<td><code>/fixtures/status=REJECTED/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>ACTIVE</code></td>
+<td><code>/fixtures/status=ACTIVE/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>DISABLED</code></td>
+<td><code>/fixtures/status=DISABLED/fixtures/</code></td>
+</tr>
+<tr>
+<td><code>ACCOUNT_CLOSED</code></td>
+<td><code>/fixtures/status=ACCOUNT_CLOSED/fixtures/</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="sample-fixture">
+  Sample Fixture
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-fixture">#</a>
+</h4>
+<p>Simulating a rejected account.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"additional_information"</span>: <span style="color:#e6db74">"/fixtures/status=REJECTED/fixtures/"</span>
+}
+</code></pre></div><hr>
+<h2 id="creating-an-account">
+  <strong>Creating an Account</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#creating-an-account">#</a>
+</h2>
+<p><code>POST /v1/accounts</code></p>
+<p>Submit an account application with KYC information. This will create a trading account for the end user. The account status may or may not be ACTIVE immediately and you will receive account status updates on the event API.</p>
+<h3 id="request">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request">#</a>
+</h3>
+<h5 id="sample-request-model">
+  Sample Request Model
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-request-model">#</a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"contact"</span>: {
+    <span style="color:#f92672">"email_address"</span>: <span style="color:#e6db74">"cool_alpaca@example.com"</span>,
+    <span style="color:#f92672">"phone_number"</span>: <span style="color:#e6db74">"555-666-7788"</span>,
+    <span style="color:#f92672">"street_address"</span>: [<span style="color:#e6db74">"20 N San Mateo Dr"</span>],
+    <span style="color:#f92672">"city"</span>: <span style="color:#e6db74">"San Mateo"</span>,
+    <span style="color:#f92672">"state"</span>: <span style="color:#e6db74">"CA"</span>,
+    <span style="color:#f92672">"postal_code"</span>: <span style="color:#e6db74">"94401"</span>,
+    <span style="color:#f92672">"country"</span>: <span style="color:#e6db74">"USA"</span>
+  },
+  <span style="color:#f92672">"identity"</span>: {
+    <span style="color:#f92672">"given_name"</span>: <span style="color:#e6db74">"John"</span>,
+    <span style="color:#f92672">"family_name"</span>: <span style="color:#e6db74">"Doe"</span>,
+    <span style="color:#f92672">"date_of_birth"</span>: <span style="color:#e6db74">"1990-01-01"</span>,
+    <span style="color:#f92672">"tax_id"</span>: <span style="color:#e6db74">"666-55-4321"</span>,
+    <span style="color:#f92672">"tax_id_type"</span>: <span style="color:#e6db74">"USA_SSN"</span>,
+    <span style="color:#f92672">"country_of_citizenship"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"country_of_birth"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"country_of_tax_residence"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"funding_source"</span>: [<span style="color:#e6db74">"employment_income"</span>]
+  },
+  <span style="color:#f92672">"disclosures"</span>: {
+    <span style="color:#f92672">"is_control_person"</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">"is_affiliated_exchange_or_finra"</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">"is_politically_exposed"</span>: <span style="color:#66d9ef">false</span>,
+    <span style="color:#f92672">"immediate_family_exposed"</span>: <span style="color:#66d9ef">false</span>
+  },
+  <span style="color:#f92672">"agreements"</span>: [
+    {
+      <span style="color:#f92672">"agreement"</span>: <span style="color:#e6db74">"margin_agreement"</span>,
+      <span style="color:#f92672">"signed_at"</span>: <span style="color:#e6db74">"2020-09-11T18:09:33Z"</span>,
+      <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"185.13.21.99"</span>,
+      <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"16.2021.05"</span>
+    },
+    {
+      <span style="color:#f92672">"agreement"</span>: <span style="color:#e6db74">"account_agreement"</span>,
+      <span style="color:#f92672">"signed_at"</span>: <span style="color:#e6db74">"2020-09-11T18:13:44Z"</span>,
+      <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"185.13.21.99"</span>,
+      <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"16.2021.05"</span>
+    },
+    {
+      <span style="color:#f92672">"agreement"</span>: <span style="color:#e6db74">"customer_agreement"</span>,
+      <span style="color:#f92672">"signed_at"</span>: <span style="color:#e6db74">"2020-09-11T18:13:44Z"</span>,
+      <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"185.13.21.99"</span>,
+      <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"16.2021.05"</span>
+    }
+  ],
+  <span style="color:#f92672">"documents"</span>: [
+    {
+      <span style="color:#f92672">"document_type"</span>: <span style="color:#e6db74">"identity_verification"</span>,
+      <span style="color:#f92672">"document_sub_type"</span>: <span style="color:#e6db74">"passport"</span>,
+      <span style="color:#f92672">"content"</span>: <span style="color:#e6db74">"QWxwYWNhcyBjYW5ub3QgbGl2ZSBhbG9uZS4="</span>,
+      <span style="color:#f92672">"mime_type"</span>: <span style="color:#e6db74">"image/jpeg"</span>
+    }
+  ],
+  <span style="color:#f92672">"trusted_contact"</span>: {
+    <span style="color:#f92672">"given_name"</span>: <span style="color:#e6db74">"Jane"</span>,
+    <span style="color:#f92672">"family_name"</span>: <span style="color:#e6db74">"Doe"</span>,
+    <span style="color:#f92672">"email_address"</span>: <span style="color:#e6db74">"jane.doe@example.com"</span>
+  }
+}
+</code></pre></div><h4 id="parameters-1">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters-1">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contact</code></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>identity</code></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>disclosures</code></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>documents</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>trusted_contact</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contact</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Requirement</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td><em>Phone number should include the country code, format: “+15555555555”</em></td>
+</tr>
+<tr>
+<td><code>street_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td><blockquote class="book-hint danger">
+  required if <code>country_of_tax_residency</code> in identity model (below) is ‘USA’
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Identity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Requirement</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>given_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>date</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tax_id</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Required if <code>tax_id_type</code> is set.</td>
+</tr>
+<tr>
+<td><code>tax_id_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#tax-id-type">ENUM.TaxIdType</a></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Required if <code>tax_id</code> is set.</td>
+</tr>
+<tr>
+<td><code>country_of_citizenship</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>3 letter country code acceptable</td>
+</tr>
+<tr>
+<td><code>country_of_birth</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>3 letter country code acceptable</td>
+</tr>
+<tr>
+<td><code>country_of_tax_residency</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>3 letter country code acceptable</td>
+</tr>
+<tr>
+<td><code>visa_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#visa-type">ENUM.VisaType</a></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Only used to collect visa types for users residing in the USA.</td>
+</tr>
+<tr>
+<td><code>visa_expiration_date</code></td>
+<td>date</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Required if <code>visa_type</code> is set.</td>
+</tr>
+<tr>
+<td><code>date_of_departure_from_usa</code></td>
+<td>date</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Required if <code>visa_type</code> = <code>B1</code> or <code>B2</code></td>
+</tr>
+<tr>
+<td><code>permanent_resident</code></td>
+<td>boolean</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Only used to collect permanent residence status in the USA.</td>
+</tr>
+<tr>
+<td><code>funding_source</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#funding-source">ENUM.FundingSource</a></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>annual_income_min</code></td>
+<td>string/number</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>annual_income_max</code></td>
+<td>string/number</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>liquid_net_worth_min</code></td>
+<td>string/number</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>liquid_net_worth_max</code></td>
+<td>string/number</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>total_net_worth_min</code></td>
+<td>string/number</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>total_net_worth_max</code></td>
+<td>string/number</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>extra</code></td>
+<td>object</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Any additional information used for KYC purposes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disclosures</strong></p>
+<p>It is your responsibility as the service provider to denote if the account owner falls under each category defined by FINRA rules. We recommend asking these questions at any point of the onboarding process of each account owner in the form of Y/N and Radio Buttons.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Requirement</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is_control_person</code></td>
+<td>boolean</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>Whether user holds a controlling position in a publicly traded company, member of the board of directors or has policy making abilities in a publicly traded company.</td>
+</tr>
+<tr>
+<td><code>is_affiliated_exchange_or_finra</code></td>
+<td>boolean</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>is_politically_exposed</code></td>
+<td>boolean</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>immediate_family_exposed</code></td>
+<td>boolean</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>If your user’s immediate family member (sibling, husband/wife, child, parent) is either politically exposed or holds a control position.</td>
+</tr>
+<tr>
+<td><code>employment_status</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#employment-status">ENUM.EmploymentStatus</a></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employer_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employer_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employment_position</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Agreements</strong></p>
+<p>In order to comply with Alpaca’s terms of service, each account owner must be presented the following agreements.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[].agreement</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#agreements">ENUM.DocumentType</a></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>[].signed_at</code></td>
+<td>string (timestamp)</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>[].ip_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>[].revision</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Optional
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Documents</strong></p>
+<ol>
+<li>
+<p><strong>​<code>DocumentUpload</code></strong></p>
+<p>This model consists of a series of documents based on the KYC requirements. Documents are binary objects whose contents are encoded in base64. Each encoded content size is limited to 32MB.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>document_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#document-type">ENUM.DocumentType</a></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>document_sub_type</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>base64 string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>mime_type</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong><code>Document</code></strong></p>
+<p>To add an additional document after submission, please use the <code>Document</code> model below to replace any <code>DocumentUpload</code></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>document_type</code></td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#document-type">ENUM.DocumentType</a></td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>document_sub_type</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>UUID</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>mime_type</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>timestamp string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><strong>Trusted Contact</strong></p>
+<p>This model input is optional. However, the client should make reasonable effort to obtain the trusted contact information. See more details in FINRA Notice 17-11</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>given_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>First name</td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>Last name</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, only one of the following is <strong>required</strong>,</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response">#</a>
+</h3>
+<h4 id="parameters-2">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters-2">#</a>
+</h4>
+<p>If all parameters are valid and the application is accepted, you should receive a status code <code>200</code> with the following response model.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>UUID</td>
+<td>UUID that identifies the account for later reference</td>
+</tr>
+<tr>
+<td><code>account_number</code></td>
+<td>string</td>
+<td>A human-readable account number that can be shown to the end user</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum.AccountStatus</td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#account-status">ENUM.AccountStatus</a></td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>string</td>
+<td>Always USD</td>
+</tr>
+<tr>
+<td><code>last_equity</code></td>
+<td>string</td>
+<td>EOD equity calculation (cash + long market value + short market value)</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>string</td>
+<td>Format: YYYY-MM-DDTXX:YY:ZZ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sample-response-body">
+  Sample Response Body
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-response-body">#</a>
+</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"account"</span>: {
+    <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"0d18ae51-3c94-4511-b209-101e1666416b"</span>,
+    <span style="color:#f92672">"account_number"</span>: <span style="color:#e6db74">"9034005019"</span>,
+    <span style="color:#f92672">"status"</span>: <span style="color:#e6db74">"ACTIVE"</span>,
+    <span style="color:#f92672">"currency"</span>: <span style="color:#e6db74">"USD"</span>,
+    <span style="color:#f92672">"last_equity"</span>: <span style="color:#e6db74">"1500.65"</span>,
+    <span style="color:#f92672">"created_at"</span>: <span style="color:#e6db74">"2019-09-30T23:55:31.185998Z"</span>
+  }
+}
+</code></pre></div><h4 id="error-codes">
+  Error Codes
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#error-codes">#</a>
+</h4>
+<blockquote class="book-hint warning">
+  <p>400 - Bad Request</p>
+<p>​ <em>The body in the request is not valid</em></p>
+
+</blockquote>
+
+<blockquote class="book-hint warning">
+  <p>409 - Conflict</p>
+<p>​ <em>There is already an existing account registered with the same email address.</em></p>
+
+</blockquote>
+
+<blockquote class="book-hint warning">
+  <p>422 - Unprocessable Entity</p>
+<p>​ <em>Invalid input value.</em></p>
+
+</blockquote>
+
+<blockquote class="book-hint warning">
+  <p>500 - Internal Server Error​</p>
+<p><em>Some server error occurred. Please contact Alpaca.</em></p>
+
+</blockquote>
+
+<hr>
+<h2 id="uploading-cip-information">
+  <strong>Uploading CIP information</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#uploading-cip-information">#</a>
+</h2>
+<p><code>POST /v1/accounts/{account_id}/cip</code></p>
+<p>The customer identification program (CIP) API allows you to submit the CIP results received from your KYC provider.</p>
+<p>Financial institutions and other obliged entities must have reasonable procedures to gather and maintain information on customers’ identities, along with running watchlist checks on them.</p>
+<p>The minimum requirements to open an individual financial account are delimited and you must verify the true identity of the account holder at account opening:</p>
+<ul>
+<li>Name</li>
+<li>Date of birth</li>
+<li>Address</li>
+<li>Identification number (for a U.S. citizen, a taxpayer identification number)</li>
+</ul>
+<p>Procedures for identity verification include documents (for example, driver’s licenses and passports), non-documentary methods (for example, data sources like credit bureaus and government databases), or a combination of both.</p>
+<h3 id="request-1">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-1">#</a>
+</h3>
+<h4 id="sample-request-body">
+  Sample Request Body
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-request-body">#</a>
+</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"provider_name"</span>: [<span style="color:#e6db74">"onfido"</span>],
+  <span style="color:#f92672">"kyc"</span>: {
+    <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"CBDAD1C4-1047-450E-BAE5-B6C406F509B4"</span>,
+    <span style="color:#f92672">"risk_level"</span>: <span style="color:#e6db74">"LOW"</span>,
+    <span style="color:#f92672">"applicant_name"</span>: <span style="color:#e6db74">"John Doe"</span>,
+    <span style="color:#f92672">"email_address"</span>: <span style="color:#e6db74">"johndoe@example.com"</span>,
+    <span style="color:#f92672">"nationality"</span>: <span style="color:#e6db74">"American"</span>,
+    <span style="color:#f92672">"id_number"</span>: <span style="color:#e6db74">"jd0000123456789"</span>,
+    <span style="color:#f92672">"date_of_birth"</span>: <span style="color:#e6db74">"1970-12-01"</span>,
+    <span style="color:#f92672">"address"</span>: <span style="color:#e6db74">"42 Faux St"</span>,
+    <span style="color:#f92672">"postal_code"</span>: <span style="color:#e6db74">"94401"</span>,
+    <span style="color:#f92672">"country_of_residency"</span>: <span style="color:#e6db74">"USA"</span>,
+    <span style="color:#f92672">"kyc_completed_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"127.0.0.1"</span>,
+    <span style="color:#f92672">"check_initiated_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"check_completed_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"approval_status"</span>: <span style="color:#e6db74">"approved"</span>,
+    <span style="color:#f92672">"approved_by"</span>: <span style="color:#e6db74">"Jane Doe"</span>,
+    <span style="color:#f92672">"approved_at"</span>: <span style="color:#e6db74">"2021-06-10T15:38:03Z"</span>
+  },
+  <span style="color:#f92672">"document"</span>: {
+    <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"55B9931A-3BE6-4BC0-9BDD-0B954E4A4632"</span>,
+    <span style="color:#f92672">"result"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"status"</span>: <span style="color:#e6db74">"complete"</span>,
+    <span style="color:#f92672">"created_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"image_integrity"</span>: <span style="color:#e6db74">"clear"</span>
+  },
+  <span style="color:#f92672">"photo"</span>: {
+    <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"0DD13020-F0FD-4B5A-B58F-BC1885E90A6D"</span>,
+    <span style="color:#f92672">"result"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"status"</span>: <span style="color:#e6db74">"complete"</span>,
+    <span style="color:#f92672">"created_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"face_comparison"</span>: <span style="color:#e6db74">"clear"</span>
+  },
+  <span style="color:#f92672">"identity"</span>: {
+    <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"28E1CCE8-1B1A-4472-9AD4-C6C5B7C3A6AF"</span>,
+    <span style="color:#f92672">"result"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"status"</span>: <span style="color:#e6db74">"complete"</span>,
+    <span style="color:#f92672">"created_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"sources"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"address"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"date_of_birth"</span>: <span style="color:#e6db74">"clear"</span>
+  },
+  <span style="color:#f92672">"watchlist"</span>: {
+    <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"7572B870-EB4C-46A2-8B88-509194CCEE7E"</span>,
+    <span style="color:#f92672">"result"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"status"</span>: <span style="color:#e6db74">"complete"</span>,
+    <span style="color:#f92672">"created_at"</span>: <span style="color:#e6db74">"2021-06-10T15:37:03Z"</span>,
+    <span style="color:#f92672">"politically_exposed_person"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"sanction"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"adverse_media"</span>: <span style="color:#e6db74">"clear"</span>,
+    <span style="color:#f92672">"monitored_lists"</span>: <span style="color:#e6db74">"clear"</span>
+  }
+}
+</code></pre></div><h4 id="parameters-3">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters-3">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>provider</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>kyc</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>document</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>photo</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>identity</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+<tr>
+<td><code>watchlist</code></td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>KYC</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string/UUID</td>
+<td>Your internal ID of check</td>
+</tr>
+<tr>
+<td><code>risk_score</code></td>
+<td>int</td>
+<td>Overall risk score returned by KYC provider or assessed</td>
+</tr>
+<tr>
+<td><code>risk_level</code></td>
+<td>string</td>
+<td>Overall risk level returned by KYC provider or assessed</td>
+</tr>
+<tr>
+<td><code>risk_categories</code></td>
+<td>string</td>
+<td>The list of risk categories returned by the KYC provider or assessed</td>
+</tr>
+<tr>
+<td><code>applicant_name</code></td>
+<td>string</td>
+<td>Given and family name of applicant</td>
+</tr>
+<tr>
+<td><code>email_address</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nationality</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>id_number</code></td>
+<td>string</td>
+<td>Government issued ID number of applicant</td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>address</code></td>
+<td>string</td>
+<td>Concatenated street address, city, state and country of applicant</td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>country_of_residency</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>kyc_completed_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip_address</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>check_initiated_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>check_completed_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>approval_status</code></td>
+<td>enum.CIPApprovalStatus</td>
+<td>ENUM: <code>approved</code> or <code>rejected</code></td>
+</tr>
+<tr>
+<td><code>approved_by</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>approved_reason</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>approved_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Document</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string/UUID</td>
+<td>Your internal ID of check</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td>enum.CIPResult</td>
+<td>Overall result of specific check</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum.CIPStatus</td>
+<td>Overall status of specific check</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_of_expiry</code></td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>document_numbers</code></td>
+<td>array</td>
+<td>Number of the document that was checked</td>
+</tr>
+<tr>
+<td><code>document_type</code></td>
+<td>string</td>
+<td>Type of the document that was checked</td>
+</tr>
+<tr>
+<td><code>first_name</code></td>
+<td>string</td>
+<td>First name extracted from the document</td>
+</tr>
+<tr>
+<td><code>last_name</code></td>
+<td>string</td>
+<td>Last name extracted from the document</td>
+</tr>
+<tr>
+<td><code>gender</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>issuing_country</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nationality</code></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td><code>age_validation</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether the age calculated from the document’s date of birth data point is greater than or equal to the minimum accepted age set at account level</td>
+</tr>
+<tr>
+<td><code>compromised_document</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether the image of the document has been found in our internal database of compromised documents</td>
+</tr>
+<tr>
+<td><code>police_record </code></td>
+<td>enum.CIPStatus</td>
+<td>Checks whether the document has been identified as lost, stolen or otherwise compromised</td>
+</tr>
+<tr>
+<td><code>data_comparison</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether data on the document is consistent with data provided when creating an applicant through the API</td>
+</tr>
+<tr>
+<td><code>data_comparison_breakdown</code></td>
+<td>object</td>
+<td>example: {“date_of_birth”: “clear”, “date_of_expiry”: “clear” “document_numbers”: “clear”, “document_type”: “clear”, “first_name”: “clear”, “gender”: “clear”, “issuing_country”: “clear”, “last_name”: “clear”}</td>
+</tr>
+<tr>
+<td><code>image_integrity</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether the document was of sufficient quality to verify</td>
+</tr>
+<tr>
+<td><code>image_integrity_breakdown</code></td>
+<td>object</td>
+<td>example: {“colour_picture”: “clear”, “conclusive_document_quality”: “clear”, “image_quality”: “clear”, “supported_document”: “clear”}</td>
+</tr>
+<tr>
+<td><code>visual_authenticity</code></td>
+<td>object</td>
+<td>Checks whether visual (non-textual) elements are correct given the document type. Example: {“digital_tampering”: “clear”, “face_detection”: “clear”, “fonts”: “clear”, “original_document_present”: “clear”, “picture_face_integrity”: “clear”, “security_features”: “clear”, “template”: “clear”}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Photo</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string/UUID</td>
+<td>Your internal ID of check</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td>enum.CIPResult</td>
+<td>Overall result of specific check</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum.CIPStatus</td>
+<td>Overall status of specific check</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>face_comparison</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether the face in the document matches the face in the live photo</td>
+</tr>
+<tr>
+<td><code>face_comparison_breakdown</code></td>
+<td>object</td>
+<td>{“face_match”:{“result”: “clear”,“properties”:{“score”: “80”}}}</td>
+</tr>
+<tr>
+<td><code>image_integrity</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether the quality and integrity of the uploaded files were sufficient to perform a face comparison</td>
+</tr>
+<tr>
+<td><code>image_integrity_breakdown</code></td>
+<td>string</td>
+<td>example: {“face_detected”:{“result”: “clear”},“source_integrity”: {“result”: “clear”}}</td>
+</tr>
+<tr>
+<td><code>visual_authenticity</code></td>
+<td>enum.CIPResult</td>
+<td>Checks whether the person in the live photo is real (not a spoof)</td>
+</tr>
+<tr>
+<td><code>visual_authenticity_breakdown</code></td>
+<td>string</td>
+<td>{“spoofing_detection”: {“result”: “clear”,“properties”: {“score”: “26”}}}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Identity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string/UUID</td>
+<td>Your internal ID of check</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td>enum.CIPResult</td>
+<td>Overall result of specific check</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum.CIPStatus</td>
+<td>Overall status of specific check</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>matched_address</code></td>
+<td>enum.CIPResult</td>
+<td>Represents the matched address for the applicant</td>
+</tr>
+<tr>
+<td><code>matched_addresses</code></td>
+<td>object</td>
+<td>example: [{“id”: “19099121”,“match_types”:[“credit_agencies”,“voting_register”]}]</td>
+</tr>
+<tr>
+<td><code>sources</code></td>
+<td>enum.CIPResult</td>
+<td>Shows the total number of sources found for applicant’s identity</td>
+</tr>
+<tr>
+<td><code>sources_breakdown</code></td>
+<td>object</td>
+<td>example: {“total_sources”: {“result”: “clear”,“properties”: {“total_number_of_sources”: “3”}}}</td>
+</tr>
+<tr>
+<td><code>address</code></td>
+<td>enum.CIPResult</td>
+<td>Result if it was cleared against a data source</td>
+</tr>
+<tr>
+<td><code>address_breakdown</code></td>
+<td>object</td>
+<td>example: {“credit_agencies”: {“result”: “clear”,“properties”:{“number_of_matches”:“1”}}</td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>enum.CIPResult</td>
+<td>Result if it was cleared against a data source</td>
+</tr>
+<tr>
+<td><code>date_of_birth_breakdown</code></td>
+<td>object</td>
+<td>example: {“credit_agencies”:{“result”: “clear”,“properties”: {“number_of_matches”: “1”}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Watchlist</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string/UUID</td>
+<td>Your internal ID of check</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td>enum.CIPResult</td>
+<td>Overall result of specific check</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>enum.CIPStatus</td>
+<td>Overall status of specific check</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>records</code></td>
+<td>object</td>
+<td>[{“text”: “Record info”}]</td>
+</tr>
+<tr>
+<td><code>politically_exposed_person</code></td>
+<td>enum.CIPResult</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sanction</code></td>
+<td>enum.CIPResult</td>
+<td></td>
+</tr>
+<tr>
+<td><code>adverse_media</code></td>
+<td>enum.CIPResult</td>
+<td></td>
+</tr>
+<tr>
+<td><code>monitored_lists</code></td>
+<td>enum.CIPResult</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="enums-1">
+  Enums
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#enums-1">#</a>
+</h3>
+<h4 id="cip-result">
+  CIP Result
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#cip-result">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clear</code></td>
+<td>If all underlying verifications pass, the result is clear</td>
+</tr>
+<tr>
+<td><code>consider</code></td>
+<td>If the check has returned information that needs to be evaluated, the result is consider</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cip-status">
+  CIP Status
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#cip-status">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>complete</code></td>
+<td>Check is done</td>
+</tr>
+<tr>
+<td><code>withdrawn</code></td>
+<td>Check has been cancelled</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cip-provider">
+  CIP Provider
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#cip-provider">#</a>
+</h4>
+<p>This list contains the KYC providers that have been whitelisted by Alpaca. In case you</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>trulioo</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>onfido</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>veriff</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>jumio</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>getmati</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>alloy</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="retrieving-cip-information">
+  <strong>Retrieving CIP information</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-cip-information">#</a>
+</h2>
+<p><code>GET /v1/accounts/{account_id}/cip</code></p>
+<p>You can retrieve the CIP information you’ve submitted for a given account.</p>
+<h3 id="request-2">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-2">#</a>
+</h3>
+<p>N/A</p>
+<h3 id="response-1">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-1">#</a>
+</h3>
+<p>It will return the CIP ID generated on submission, <code>account_id</code>, and CIP data if it exists otherwise will throw an error.</p>
+<hr>
+<h2 id="international-accounts">
+  <strong>International Accounts</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#international-accounts">#</a>
+</h2>
+<h3 id="w-8-ben">
+  W-8 BEN
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#w-8-ben">#</a>
+</h3>
+<p>For certain individuals, a W-8 BEN form should be submitted at onboarding. If the individual is not a registered U.S. taxpayer (not subject to a W-9), the W-8 BEN form may need to be submitted. The IRS explains <a href="https://www.irs.gov/instructions/iw8ben">here</a> which individuals this applies to and provides instructions on completing the form. Every three years, in addition to the calendar year it was signed, a new W-8 BEN form must be submitted.</p>
+<p>The form can be submitted in JSON, JSONC, PNG, JPEG or PDF. If submitting it in JSON, please see the W-8 BEN completed with the corresponding field names for the API <a href="https://s3.amazonaws.com/docs.alpaca.markets/files/W-8Ben+Example+Broker+Docs.pdf">here</a>.</p>
+<p>Note: The dates collected on the form are in a slightly different format than how they need to be submitted via Accounts API. It is requested by the user on the form in MM-DD-YYYY, but should be submitted as YYYY-MM-DD.</p>
+<h4 id="sample-request-body-1">
+  Sample Request Body
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-request-body-1">#</a>
+</h4>
+<p>Note: This W-8 BEN sample is document object that will be included in the documents parameter of the account object.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"document_type"</span>: <span style="color:#e6db74">"w8ben"</span>,
+  <span style="color:#f92672">"content_data"</span>: {
+    <span style="color:#f92672">"additional_conditions"</span>: <span style="color:#e6db74">"None"</span>,
+    <span style="color:#f92672">"capacity_acting"</span>: <span style="color:#e6db74">"SELF"</span>,
+    <span style="color:#f92672">"country_citizen"</span>: <span style="color:#e6db74">"Australia"</span>,
+    <span style="color:#f92672">"date"</span>: <span style="color:#e6db74">"2021-06-14"</span>,
+    <span style="color:#f92672">"date_of_birth"</span>: <span style="color:#e6db74">"1970-01-01"</span>,
+    <span style="color:#f92672">"foreign_tax_id"</span>: <span style="color:#e6db74">"123 456 789"</span>,
+    <span style="color:#f92672">"full_name"</span>: <span style="color:#e6db74">"John Doe"</span>,
+    <span style="color:#f92672">"ip_address"</span>: <span style="color:#e6db74">"127.0.0.1"</span>,
+    <span style="color:#f92672">"mailing_address_city_state"</span>: <span style="color:#e6db74">"Adelaide"</span>,
+    <span style="color:#f92672">"mailing_address_country"</span>: <span style="color:#e6db74">"Australia"</span>,
+    <span style="color:#f92672">"mailing_address_street"</span>: <span style="color:#e6db74">"51 Main St"</span>,
+    <span style="color:#f92672">"paragraph_number"</span>: <span style="color:#e6db74">"15"</span>,
+    <span style="color:#f92672">"percent_rate_withholding"</span>: <span style="color:#ae81ff">5.0</span>,
+    <span style="color:#f92672">"permanent_address_city_state"</span>: <span style="color:#e6db74">"Adelaide"</span>,
+    <span style="color:#f92672">"permanent_address_country"</span>: <span style="color:#e6db74">"Australia"</span>,
+    <span style="color:#f92672">"permanent_address_street"</span>: <span style="color:#e6db74">"20 Main St"</span>,
+    <span style="color:#f92672">"reference_number"</span>: <span style="color:#e6db74">"abc123"</span>,
+    <span style="color:#f92672">"residency"</span>: <span style="color:#e6db74">"Australia"</span>,
+    <span style="color:#f92672">"revision"</span>: <span style="color:#e6db74">"7-2017"</span>,
+    <span style="color:#f92672">"tax_id_ssn"</span>: <span style="color:#e6db74">"123-00-456"</span>,
+    <span style="color:#f92672">"timestamp"</span>: <span style="color:#e6db74">"2021-06-14T09:31:05Z"</span>,
+    <span style="color:#f92672">"income_type"</span>: <span style="color:#e6db74">"interest"</span>,
+    <span style="color:#f92672">"signer_full_name"</span>: <span style="color:#e6db74">"Mr. Signing User"</span>
+  }
+}
+</code></pre></div><h4 id="parameters-4">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters-4">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Requirement</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>additional_conditions</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>capacity_acting</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>country_citizen</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>date</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td><em>Format YYYY-MM-DD</em></td>
+</tr>
+<tr>
+<td><code>date_of_birth</code></td>
+<td>date</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td><em>Format YYYY-MM-DD</em></td>
+</tr>
+<tr>
+<td><code>foreign_tax_id</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>full_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>income_type</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mailing_address_city_state</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mailing_address_country</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>mailing_address_street</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>paragraph_number</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>percent_rate_withholding</code></td>
+<td>string (decimal)</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permanent_address_city_state</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permanent_address_country</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permanent_address_street</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>reference_number</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>residency</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>revision</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td><em>“7-2017” until the IRS releases an updated version of the form</em></td>
+</tr>
+<tr>
+<td><code>signer_full_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tax_id_ssn</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>string (timestamp)</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="listing-all-accounts">
+  <strong>Listing All Accounts</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#listing-all-accounts">#</a>
+</h2>
+<p><code>GET /v1/accounts</code></p>
+<p>You can query a list of all the accounts that you submitted to Alpaca. You can tweak the query to return a list of accounts that fulfill certain conditions passed.</p>
+<h3 id="request-3">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-3">#</a>
+</h3>
+<h5 id="parameters-5">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters-5">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>query</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Pass space-delimited tokens. The response will contain accounts that match with each of the tokens (logical AND). A match means the token is present in either the account’s associated account number, phone number, name, or e-mail address (logical OR).</td>
+</tr>
+<tr>
+<td><code>created_after</code></td>
+<td>string, timestamp</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>created_before</code></td>
+<td>string, timestamp</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>ENUM.AccountStatus</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#account-status">ENUM.AccountStatus</a></td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td><code>asc</code> or <code>desc</code>. Defaults to <code>desc</code></td>
+</tr>
+<tr>
+<td><code>entities</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Comma-delimited entity names to include in the response</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-2">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-2">#</a>
+</h3>
+<p>Up to 1,000 items per query, ordered by <code>created_at</code>.</p>
+<hr>
+<h2 id="retrieving-an-account-brokerage">
+  <strong>Retrieving an Account (Brokerage)</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-brokerage">#</a>
+</h2>
+<p><code>GET /v1/accounts/{account_id}</code></p>
+<p>You can query a specific account that you submitted to Alpaca by passing into the query the <code>account_id</code> associated with the account you’re retrieving.</p>
+<h3 id="request-4">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-4">#</a>
+</h3>
+<p>N/A</p>
+<h3 id="response-3">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-3">#</a>
+</h3>
+<p>Will return an account if account with <code>account_id</code> exists, otherwise will throw an error.</p>
+<hr>
+<h2 id="retrieving-an-account-trading">
+  <strong>Retrieving an Account (Trading)</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-trading">#</a>
+</h2>
+<p><code>GET /v1/trading/accounts/{account_id}/account</code></p>
+<p>As a broker you can view more trading details about your users.</p>
+<h3 id="request-5">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-5">#</a>
+</h3>
+<p>N/A</p>
+<h3 id="response-4">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-4">#</a>
+</h3>
+<h4 id="sample-response">
+  Sample Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-response">#</a>
+</h4>
+<p>The response is a much more expanded account object found here in <a href="https://alpaca.markets/docs/api-documentation/api-v2/account/#account-entity">Trading API</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">"id"</span>: <span style="color:#e6db74">"c8f1ef5d-edc0-4f23-9ee4-378f19cb92a4"</span>,
+  <span style="color:#f92672">"account_number"</span>: <span style="color:#e6db74">"927584925"</span>,
+  <span style="color:#f92672">"status"</span>: <span style="color:#e6db74">"ACTIVE"</span>,
+  <span style="color:#f92672">"currency"</span>: <span style="color:#e6db74">"USD"</span>,
+  <span style="color:#f92672">"buying_power"</span>: <span style="color:#e6db74">"103556.8572572922"</span>,
+  <span style="color:#f92672">"regt_buying_power"</span>: <span style="color:#e6db74">"52921.2982330664"</span>,
+  <span style="color:#f92672">"daytrading_buying_power"</span>: <span style="color:#e6db74">"103556.8572572922"</span>,
+  <span style="color:#f92672">"cash"</span>: <span style="color:#e6db74">"24861.91"</span>,
+  <span style="color:#f92672">"cash_withdrawable"</span>: <span style="color:#e6db74">"17861.91"</span>,
+  <span style="color:#f92672">"cash_transferable"</span>: <span style="color:#e6db74">"24861.91"</span>,
+  <span style="color:#f92672">"accrued_fees"</span>: <span style="color:#e6db74">"0"</span>,
+  <span style="color:#f92672">"pending_transfer_out"</span>: <span style="color:#e6db74">"0"</span>,
+  <span style="color:#f92672">"portfolio_value"</span>: <span style="color:#e6db74">"28059.3882330664"</span>,
+  <span style="color:#f92672">"pattern_day_trader"</span>: <span style="color:#66d9ef">true</span>,
+  <span style="color:#f92672">"trading_blocked"</span>: <span style="color:#66d9ef">false</span>,
+  <span style="color:#f92672">"transfers_blocked"</span>: <span style="color:#66d9ef">false</span>,
+  <span style="color:#f92672">"account_blocked"</span>: <span style="color:#66d9ef">false</span>,
+  <span style="color:#f92672">"created_at"</span>: <span style="color:#e6db74">"2021-03-01T13:28:49.270232Z"</span>,
+  <span style="color:#f92672">"trade_suspended_by_user"</span>: <span style="color:#66d9ef">false</span>,
+  <span style="color:#f92672">"multiplier"</span>: <span style="color:#e6db74">"4"</span>,
+  <span style="color:#f92672">"shorting_enabled"</span>: <span style="color:#66d9ef">true</span>,
+  <span style="color:#f92672">"equity"</span>: <span style="color:#e6db74">"28059.3882330664"</span>,
+  <span style="color:#f92672">"last_equity"</span>: <span style="color:#e6db74">"26977.323677655"</span>,
+  <span style="color:#f92672">"long_market_value"</span>: <span style="color:#e6db74">"3197.4782330664"</span>,
+  <span style="color:#f92672">"short_market_value"</span>: <span style="color:#e6db74">"0"</span>,
+  <span style="color:#f92672">"initial_margin"</span>: <span style="color:#e6db74">"1598.7391165332"</span>,
+  <span style="color:#f92672">"maintenance_margin"</span>: <span style="color:#e6db74">"959.24346991992"</span>,
+  <span style="color:#f92672">"last_maintenance_margin"</span>: <span style="color:#e6db74">"934.6241032965"</span>,
+  <span style="color:#f92672">"sma"</span>: <span style="color:#e6db74">"26758.0590204615"</span>,
+  <span style="color:#f92672">"daytrade_count"</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">"previous_close"</span>: <span style="color:#e6db74">"2021-04-01T19:00:00-04:00"</span>,
+  <span style="color:#f92672">"last_long_market_value"</span>: <span style="color:#e6db74">"3115.413677655"</span>,
+  <span style="color:#f92672">"last_short_market_value"</span>: <span style="color:#e6db74">"0"</span>,
+  <span style="color:#f92672">"last_cash"</span>: <span style="color:#e6db74">"23861.91"</span>,
+  <span style="color:#f92672">"last_initial_margin"</span>: <span style="color:#e6db74">"1557.7068388275"</span>,
+  <span style="color:#f92672">"last_regt_buying_power"</span>: <span style="color:#e6db74">"50839.233677655"</span>,
+  <span style="color:#f92672">"last_daytrading_buying_power"</span>: <span style="color:#e6db74">"104433.9158860662"</span>,
+  <span style="color:#f92672">"last_buying_power"</span>: <span style="color:#e6db74">"104433.9158860662"</span>,
+  <span style="color:#f92672">"last_daytrade_count"</span>: <span style="color:#ae81ff">0</span>,
+  <span style="color:#f92672">"clearing_broker"</span>: <span style="color:#e6db74">"VELOX"</span>
+}
+</code></pre></div><h4 id="attributes-1">
+  Attributes
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#attributes-1">#</a>
+</h4>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>string/uuid</td>
+<td>The account ID</td>
+</tr>
+<tr>
+<td><code>account_number</code></td>
+<td>string</td>
+<td>The account number</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>ENUM.AccountStatus</td>
+<td>The current status of the account</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>string</td>
+<td>Always <code>USD</code></td>
+</tr>
+<tr>
+<td><code>buying_power</code></td>
+<td>string/number</td>
+<td>Current available cash buying power. If multiplier = 2 then <code>buying_power</code> = max(<code>equity</code>-<code>initial_margin</code>(0) * 2). If multiplier = 1 then <code>buying_power</code> = <code>cash</code>.</td>
+</tr>
+<tr>
+<td><code>regt_buying_power</code></td>
+<td>string/number</td>
+<td>User’s buying power under Regulation T (excess equity - (equity - margin value) - * margin multiplier)</td>
+</tr>
+<tr>
+<td><code>daytrading_buying_power</code></td>
+<td>string/number</td>
+<td>Your buying power for day trades (continuously updated value)</td>
+</tr>
+<tr>
+<td><code>cash</code></td>
+<td>string/number</td>
+<td>Cash balance</td>
+</tr>
+<tr>
+<td><code>cash_withdrawable</code></td>
+<td>string/number</td>
+<td>Cash available for withdrawal</td>
+</tr>
+<tr>
+<td><code>cash_transferable</code></td>
+<td>string/number</td>
+<td>Cash available for transfer (JNLC)</td>
+</tr>
+<tr>
+<td><code>pending_transfer_out</code></td>
+<td>string/number</td>
+<td>Cash pending transfer out</td>
+</tr>
+<tr>
+<td><code>portfolio_value</code></td>
+<td>string/number</td>
+<td>Total value of cash + holding positions. (This field is deprecated. It is equivalent to the equity field.)</td>
+</tr>
+<tr>
+<td><code>pattern_day_trader</code></td>
+<td>boolean</td>
+<td>Whether account is flagged as pattern day trader or not.</td>
+</tr>
+<tr>
+<td><code>trading_blocked</code></td>
+<td>boolean</td>
+<td>If true, the account is not allowed to place orders.</td>
+</tr>
+<tr>
+<td><code>transfers_blocked</code></td>
+<td>boolean</td>
+<td>If true, the account is not allowed to request money transfers.</td>
+</tr>
+<tr>
+<td><code>account_blocked</code></td>
+<td>boolean</td>
+<td>If true, the account activity by user is prohibited.</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td>boolean</td>
+<td>Timestamp this account was created at</td>
+</tr>
+<tr>
+<td><code>trade_suspended_by_user</code></td>
+<td>string/number</td>
+<td>If true, the account is not allowed to place orders.</td>
+</tr>
+<tr>
+<td><code>multiplier</code></td>
+<td>string/number</td>
+<td>“1” or “2”</td>
+</tr>
+<tr>
+<td><code>shorting_enabled</code></td>
+<td>boolean</td>
+<td>Flag to denote whether or not the account is permitted to short</td>
+</tr>
+<tr>
+<td><code>equity</code></td>
+<td>string/number</td>
+<td><code>cash</code> + <code>long_market_value</code> + <code>short_market_value</code></td>
+</tr>
+<tr>
+<td><code>last_equity</code></td>
+<td>string/number</td>
+<td>Equity as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>long_market_value</code></td>
+<td>string/number</td>
+<td>Real-time MtM value of all long positions held in the account</td>
+</tr>
+<tr>
+<td><code>short_market_value</code></td>
+<td>string/number</td>
+<td>Real-time MtM value of all short positions held in the account</td>
+</tr>
+<tr>
+<td><code>initial_margin</code></td>
+<td>string/number</td>
+<td>Reg T initial margin requirement (continuously updated value)</td>
+</tr>
+<tr>
+<td><code>maintenance_margin</code></td>
+<td>string/number</td>
+<td>Maintenance margin requirement (continuously updated value)</td>
+</tr>
+<tr>
+<td><code>last_maintenance_margin</code></td>
+<td>string/number</td>
+<td>Maintenance margin requirement on the previous trading day</td>
+</tr>
+<tr>
+<td><code>sma</code></td>
+<td>string/number</td>
+<td>Value of <strong>Special Memorandum Account</strong> (will be used at a later date to provide additional buying_power)</td>
+</tr>
+<tr>
+<td><code>daytrade_count</code></td>
+<td>number</td>
+<td>The current number of daytrades that have been made in the last 5 trading days (inclusive of today)</td>
+</tr>
+<tr>
+<td><code>previous_close</code></td>
+<td>string/timedate</td>
+<td>Previous sessions close time</td>
+</tr>
+<tr>
+<td><code>last_long_market_value</code></td>
+<td>string/number</td>
+<td>Value of all long positions as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>last_short_market_value</code></td>
+<td>string/number</td>
+<td>Value of all short positions as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>last_cash</code></td>
+<td>string/number</td>
+<td>Value of all cash as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>last_initial_margin</code></td>
+<td>string/number</td>
+<td>Value of Reg T margin as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>last_regt_buying_power</code></td>
+<td>string/number</td>
+<td>Value of Reg T buying power as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>last_daytrading_buying_power</code></td>
+<td>string/number</td>
+<td>Value of daytrading buying power as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>last_daytrade_count</code></td>
+<td>string/number</td>
+<td>Value of daytrade count as of previous trading day at 16:00:00 ET</td>
+</tr>
+<tr>
+<td><code>clearing_broker</code></td>
+<td>string/number</td>
+<td>Clearing broker</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="updating-an-account">
+  <strong>Updating an Account</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#updating-an-account">#</a>
+</h2>
+<p><code>PATCH /v1/accounts/{account_id}</code></p>
+<p>This operation updates account information. The following attribute are modifiable.</p>
+<h3 id="request-6">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-6">#</a>
+</h3>
+<h5 id="parameters-6">
+  Parameters
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#parameters-6">#</a>
+</h5>
+<p><strong>Contact</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Key</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email_address</code></td>
+<td>[].contact</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Email addresses should be verified prior to using this operation to update them</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>[].contact</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street_address</code></td>
+<td>[].contact</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>[].contact</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>[].contact</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>[].contact</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Partners are responsible for submitting updated documents as required by the updates being made</li>
+<li>Guidance for Form W-8 BEN on changes in circumstance can be found <a href="https://www.irs.gov/instructions/iw8ben">here</a></li>
+<li>Letters sent to customers on address changes should blind carbon copy (bcc) <a href="mailto:support@alpaca.markets">support@alpaca.markets</a></li>
+</ul>
+<p><strong>Identity</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Key</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>visa_type</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Only used to collect visa types for users residing in the USA.</td>
+</tr>
+<tr>
+<td><code>visa_expiration_date</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Required if <code>visa_type</code> is set.</td>
+</tr>
+<tr>
+<td><code>date_of_departure_from_usa</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Required if <code>visa_type</code> = <code>B1</code> or <code>B2</code></td>
+</tr>
+<tr>
+<td><code>permanent_resident</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>Only used to collect permanent residence status in the USA.</td>
+</tr>
+<tr>
+<td><code>funding_source</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>annual_income_min</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>annual_income_max</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>liquid_net_worth_min</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>liquid_net_worth_max</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>total_net_worth_min</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>total_net_worth_max</code></td>
+<td>[].identity</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disclosures</strong></p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Key</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is_control_person</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>is_affiliated_exchange_or_finra</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>is_politically_exposed</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>immediate_family_exposed</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employment_status</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employer_name</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employer_address</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>employment_position</code></td>
+<td>[].disclosures</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trusted Contact</strong></p>
+<p>You can change the name of the trusted contact if you want.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>given_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>First name</td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>string</td>
+<td><blockquote class="book-hint danger">
+  Required
+</blockquote>
+</td>
+<td>Last name</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, you can also change the way to reach the trusted contact by updating the following.
+Only one of <code>email_address</code>, <code>phone_number</code> or <code>streets_address</code> (with the other parameters) is required</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street_address</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+<tr>
+<td><code>postal_code</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>string</td>
+<td><blockquote class="book-hint info">
+  Optional
+</blockquote>
+</td>
+<td>If <code>street_address</code> is chosen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-5">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-5">#</a>
+</h3>
+<p>If all parameters are valid and updates have been made, it returns with status code <code>200</code>. The response is the account model.</p>
+<h4 id="error-codes-1">
+  Error Codes
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#error-codes-1">#</a>
+</h4>
+<blockquote class="book-hint warning">
+  <p>400 - Bad Request</p>
+<p>​ <em>The body in the request is not valid</em></p>
+
+</blockquote>
+
+<blockquote class="book-hint warning">
+  <p>422 - Unprocessable Entity</p>
+<p>​ <em>The request body contains an attribute that is not permitted to be updated.</em></p>
+
+</blockquote>
+
+<blockquote class="book-hint warning">
+  <p>500 - Internal Server Error​</p>
+<p><em>Some server error occurred. Please contact Alpaca.</em></p>
+
+</blockquote>
+
+<hr>
+<h2 id="deleting-an-account">
+  <strong>Deleting an Account</strong>
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#deleting-an-account">#</a>
+</h2>
+<p><code>DELETE /v1/accounts/{account_id}</code></p>
+<p>This operation closes an active account.</p>
+<h3 id="request-7">
+  Request
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-7">#</a>
+</h3>
+<p>In the <code>account_id</code> path parameter, provide the <code>id</code> of the account to be closed.</p>
+<h3 id="response-6">
+  Response
+  <a class="anchor" href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-6">#</a>
+</h3>
+<blockquote class="book-hint good">
+  204 - No Content
+</blockquote>
+
+<blockquote class="book-hint warning">
+  403 - Forbidden
+</blockquote>
+
+<blockquote class="book-hint warning">
+  404 - Account Not Found​
+</blockquote>
+
+<blockquote class="book-hint warning">
+  422 - Unprocessable Entity
+</blockquote>
+
+<p>&nbsp;</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alpacahq/bkdocs/edit/master/content/api-references/accounts/accounts.md" target="_blank" rel="noopener">
+      <img src="./Account _ Alpaca Broker API_files/edit.svg" class="book-icon" alt="Edit">
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        <script>
+  (function() {
+  'use strict';
+
+  var section = document.querySelectorAll(".book-page h2");
+  var sections = {};
+  var i = 0;
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  window.onscroll = function() {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        var q = document.querySelector('.active');
+        q.setAttribute('class', q.getAttribute('class').replace(/\bactive\b/, ''));
+        q = document.querySelector('a[href*=' + i + ']');
+        q.setAttribute('class', q.getAttribute('class') + ' active');
+      }
+    }
+  };
+})();
+
+    /* Add headers to scrollspy */
+    var headers   = document.querySelectorAll(".book-page h2");
+    var scrollspy = document.getElementById('scrollspy');
+
+    if(scrollspy) {
+      if(headers.length > 0) {
+        for(var i = 0; i < headers.length; i++) {
+          var li = document.createElement("li");
+          li.setAttribute("class", "anchor");
+
+          var a  = document.createElement("a");
+          a.setAttribute("href", "#" + headers[i].id);
+          var node = headers[i].cloneNode()
+          var title = headers[i].innerText.replace('#', ''); 
+          a.setAttribute("title", title);
+          a.innerHTML = title;
+
+          li.appendChild(a)
+          scrollspy.appendChild(li);
+        }
+      } else {
+        scrollspy.parentElement.removeChild(scrollspy)
+      }
+
+
+      /* Add permanent link next to the headers */
+      var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+      for(var i = 0; i < headers.length; i++) {
+          var a = document.createElement("a");
+          a.setAttribute("class", "headerlink");
+          a.setAttribute("href", "#" + headers[i].id);
+          a.setAttribute("title", "Permanent link")
+          
+          
+      }
+    }
+  </script>
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  <style>
+    .button {
+      background-color: #FFD700;
+      border: none;
+      color:#030303;
+      padding: 10px 35px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      font-weight: 500;
+      border-radius: 4px;
+      font-family: 'carnasbold';
+      min-width: 181px;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+      letter-spacing: 0.025em;
+    }
+
+    .button:hover {
+      background: #ffdf33;
+      font-weight: 500
+    }
+
+    
+</style>
+<br>
+<a href="https://broker-app.alpaca.markets/sign-up" class="button">Get API keys</a>
+<br>
+<br>
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#allowed-setups"><strong>Allowed Setups</strong></a></li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#the-account-model"><strong>The Account Model</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#sample-account-object">Sample Account Object</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#attributes">Attributes</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#enums">Enums</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#fixtures">Fixtures</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#creating-an-account"><strong>Creating an Account</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#uploading-cip-information"><strong>Uploading CIP information</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-1">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#enums-1">Enums</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-cip-information"><strong>Retrieving CIP information</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-2">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-1">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#international-accounts"><strong>International Accounts</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#w-8-ben">W-8 BEN</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#listing-all-accounts"><strong>Listing All Accounts</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-3">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-2">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-brokerage"><strong>Retrieving an Account (Brokerage)</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-4">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-3">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#retrieving-an-account-trading"><strong>Retrieving an Account (Trading)</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-5">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-4">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#updating-an-account"><strong>Updating an Account</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-6">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-5">Response</a></li>
+      </ul>
+    </li>
+    <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#deleting-an-account"><strong>Deleting an Account</strong></a>
+      <ul>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#request-7">Request</a></li>
+        <li><a href="https://alpaca.markets/docs/broker/api-references/accounts/accounts/#response-6">Response</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
